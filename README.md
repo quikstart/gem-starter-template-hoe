@@ -9,10 +9,10 @@ As input requires the gem name called project (in sow) and sow (auto-)derives al
 
 ### Example 1 - project: `hello`
 
-- klass       -> `Hello`
-- test_klass  -> `TestHello`
-- file_name   -> `hello`
-- modules     
+- klass       => `Hello`
+- test_klass  => `TestHello`
+- file_name   => `hello`
+- modules     =>
 
 
 1) `lib/hello.rb`: ??
@@ -36,10 +36,10 @@ end
 
 ### Example 2 - project: `pack-hello`
 
-- klass -> `Pack::Hello`
-- test_klass -> `TestPack::TestHello`
-- file_name -> `pack/hello`
-- modules -> `Pack`
+- klass      => `Pack::Hello`
+- test_klass => `TestPack::TestHello`
+- file_name  => `pack/hello`
+- modules    => `Pack`
 
 1) `lib/pack/hello.rb`: ??
 
@@ -66,10 +66,10 @@ end
 
 ### Example 3 - project: `pack-subpack-hello_world`
 
-- klass -> `Pack::Subpack::HelloWorld`
-- test_klass -> `TestPack::TestSubpack::TestHelloWorld`
-- file_name -> `pack/subpack/hello_world`
-- modules -> `Pack`, `Subpack`
+- klass      => `Pack::Subpack::HelloWorld`
+- test_klass => `TestPack::TestSubpack::TestHelloWorld`
+- file_name  => `pack/subpack/hello_world`
+- modules    => `Pack`, `Subpack`
 
 1) `lib/pack/subpack/hello_world.rb`:
 
@@ -102,7 +102,7 @@ end
 See the [hoe/template](https://github.com/seattlerb/hoe/tree/master/template) folder in the hoe source repo
 for the original template.
 
-See the [hoe/bin/sow](https://github.com/seattlerb/hoe/blob/master/bin/sow) bin(ary) command line tool source - for
+See the [hoe/bin/sow](https://github.com/seattlerb/hoe/blob/master/bin/sow) bin(ary) command line tool source for
 the original "hand-coded" built-in template merger machinery.
 
 
