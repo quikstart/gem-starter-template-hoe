@@ -11,8 +11,10 @@ Example 1 - project: hello
 
 - klass -> Hello
 - test_klass -> TestHello
+- file_name -> hello
 - modules -> 
-- filename -> hello  (same as projet) - used ??
+
+lib/hello.rb ??
 
 ```ruby
 class Hello
@@ -20,12 +22,20 @@ class Hello
 end
 ```
 
+test/test_hello.rb ??
+
+```ruby
+```
+
+
 Example 2 - project: pack-hello
 
 - klass -> Pack::Hello
 - test_klass -> TestPack::TestHello
+- file_name -> pack/hello
 - modules -> Pack
-- filename -> hello ???  or pack/hello ??
+
+lib/pack/hello.rb ??
 
 ```ruby
 module Pack ; end
@@ -35,21 +45,43 @@ class Pack::Hello
 end
 ```
 
+test/testpack/test_hello.rb ??
+
+```ruby
+```
+
+
 Example 3 - project: pack-subpack-hello_world
 
 - klass -> Pack::Subpack::HelloWorld
 - test_klass -> TestPack::TestSubpack::TestHelloWorld
+- file_name -> pack/subpack/hello_world
 - modules -> Pack, Subpack
-- filename -> hello_world
+
+lib/pack/subpack/hello_world.rb
 
 ```ruby
 module Pack ; end
-module Subpack ; end
+module Pack::Subpack ; end
 
 class Pack::Subpack::HelloWorld
   ...
 end
 ```
+
+test/testpack/testsubpack/test_hello_world.rb ??
+
+```ruby
+module TestPack ; end
+module TestPack::TestSubpack ; end
+
+class Testpack::Testsubpack::TestHelloWorld < Minitest::Test
+  ...
+end
+```
+
+bin/pack/subpack/hello_world  ??  - why use folders (e.g. pack/subpack) in bin ??
+
 
 
 ## Sources
@@ -64,5 +96,23 @@ the original "hand-coded" built-in template merger machinery.
 **Formula for Deriving Names**
 
 ```ruby
+project    = project.gsub(/([A-Z])/, '_\1').downcase.sub(/^_/, "")
 
+klass      = project.gsub(/(?:^|_)([a-z])/) { $1.upcase }
+klass      = klass.  gsub(/(?:^|-)([a-z])/) { "::#{$1.upcase}" }
+
+test_klass = klass.  gsub(/(^|::)([A-Z])/) { "#{$1}Test#{$2}" }
+
+file_name  = project.gsub(/-/, "/")
 ```
+
+Comments from the source:
+
+> Project names are lowercase with _ separating package parts and - separating extension parts.
+>
+> File names are lowercase with _ separating package parts and / separating
+> extension parts.  net-http-persistent becomes net/http/persistent.
+>
+> Klass names are CamelCase with :: separating extension parts.
+>
+> Test klass names are same as Klass with Test prepended to each part.  
