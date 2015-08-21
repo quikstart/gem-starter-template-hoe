@@ -9,10 +9,13 @@ As input requires the gem name called project (in sow) and sow (auto-)derives al
 
 ### Example 1 - project: hello
 
-- klass -> Hello
-- test_klass -> TestHello
-- file_name -> hello
-- modules -> 
+           | 
+---------- | -----
+klass      | Hello
+test_klass | TestHello
+file_name  | hello
+modules    | 
+
 
 `lib/hello.rb`: ??
 
