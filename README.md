@@ -9,7 +9,7 @@ As input requires the gem name called project (in sow) and sow (auto-)derives al
 
 ### Example 1 - project: hello
 
-           | 
+           | Example
 ---------- | -----
 klass      | Hello
 test_klass | TestHello
