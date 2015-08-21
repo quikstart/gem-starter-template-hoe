@@ -15,7 +15,7 @@ As input requires the gem name called project (in sow) and sow (auto-)derives al
 - modules     
 
 
-`lib/hello.rb`: ??
+1) `lib/hello.rb`: ??
 
 ```ruby
 class Hello
@@ -23,7 +23,7 @@ class Hello
 end
 ```
 
-`test/test_hello.rb`: ??
+2) `test/test_hello.rb`: ??
 
 ```ruby
 class TestHello < Minitest::Test
@@ -31,7 +31,7 @@ class TestHello < Minitest::Test
 end
 ```
 
-`bin/hello`  ??
+3) `bin/hello`  ??
 
 
 ### Example 2 - project: `pack-hello`
