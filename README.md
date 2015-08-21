@@ -7,14 +7,12 @@ An alternative gem starter template - use the "classic" gem starter template fro
 
 As input requires the gem name called project (in sow) and sow (auto-)derives all other names. Example:
 
-### Example 1 - project: hello
+### Example 1 - project: `hello`
 
-           | Example
----------- | -----
-klass      | Hello
-test_klass | TestHello
-file_name  | hello
-modules    | 
+- klass       -> `Hello`
+- test_klass  -> `TestHello`
+- file_name   -> `hello`
+- modules     
 
 
 `lib/hello.rb`: ??
@@ -36,12 +34,12 @@ end
 `bin/hello`  ??
 
 
-### Example 2 - project: pack-hello
+### Example 2 - project: `pack-hello`
 
-- klass -> Pack::Hello
-- test_klass -> TestPack::TestHello
-- file_name -> pack/hello
-- modules -> Pack
+- klass -> `Pack::Hello`
+- test_klass -> `TestPack::TestHello`
+- file_name -> `pack/hello`
+- modules -> `Pack`
 
 1) `lib/pack/hello.rb`: ??
 
@@ -66,12 +64,12 @@ end
 3) `bin/pack/hello`
 
 
-### Example 3 - project: pack-subpack-hello_world
+### Example 3 - project: `pack-subpack-hello_world`
 
-- klass -> Pack::Subpack::HelloWorld
-- test_klass -> TestPack::TestSubpack::TestHelloWorld
-- file_name -> pack/subpack/hello_world
-- modules -> Pack, Subpack
+- klass -> `Pack::Subpack::HelloWorld`
+- test_klass -> `TestPack::TestSubpack::TestHelloWorld`
+- file_name -> `pack/subpack/hello_world`
+- modules -> `Pack`, `Subpack`
 
 1) `lib/pack/subpack/hello_world.rb`:
 
@@ -123,11 +121,12 @@ file_name  = project.gsub(/-/, "/")
 
 Comments from the source:
 
-> Project names are lowercase with _ separating package parts and - separating extension parts.
+> Project names are lowercase with `_` separating package parts and `-` separating extension parts.
 >
-> File names are lowercase with _ separating package parts and / separating
-> extension parts.  net-http-persistent becomes net/http/persistent.
+> File names are lowercase with `_` separating package parts and `/` separating
+> extension parts.  `net-http-persistent` becomes `net/http/persistent`.
 >
-> Klass names are CamelCase with :: separating extension parts.
+> Klass names are `CamelCase` with `::` separating extension parts.
 >
 > Test klass names are same as Klass with Test prepended to each part.  
+
