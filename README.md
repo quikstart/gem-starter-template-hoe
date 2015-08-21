@@ -14,7 +14,7 @@ Example 1 - project: hello
 - file_name -> hello
 - modules -> 
 
-lib/hello.rb ??
+`lib/hello.rb`: ??
 
 ```ruby
 class Hello
@@ -22,10 +22,15 @@ class Hello
 end
 ```
 
-test/test_hello.rb ??
+`test/test_hello.rb`: ??
 
 ```ruby
+class TestHello < Minitest::Test
+  ...
+end
 ```
+
+`bin/hello`  ??
 
 
 Example 2 - project: pack-hello
@@ -35,7 +40,7 @@ Example 2 - project: pack-hello
 - file_name -> pack/hello
 - modules -> Pack
 
-lib/pack/hello.rb ??
+1) `lib/pack/hello.rb`: ??
 
 ```ruby
 module Pack ; end
@@ -45,10 +50,17 @@ class Pack::Hello
 end
 ```
 
-test/testpack/test_hello.rb ??
+2) `test/testpack/test_hello.rb`: ??
 
 ```ruby
+module TestPack ; end
+
+class TestPack::TestHello < Minitest::Test
+  ...
+end
 ```
+
+3) `bin/pack/hello`
 
 
 Example 3 - project: pack-subpack-hello_world
@@ -58,7 +70,7 @@ Example 3 - project: pack-subpack-hello_world
 - file_name -> pack/subpack/hello_world
 - modules -> Pack, Subpack
 
-lib/pack/subpack/hello_world.rb
+1) `lib/pack/subpack/hello_world.rb`:
 
 ```ruby
 module Pack ; end
@@ -69,7 +81,7 @@ class Pack::Subpack::HelloWorld
 end
 ```
 
-test/testpack/testsubpack/test_hello_world.rb ??
+2) `test/testpack/testsubpack/test_hello_world.rb`: ??
 
 ```ruby
 module TestPack ; end
@@ -80,7 +92,7 @@ class Testpack::Testsubpack::TestHelloWorld < Minitest::Test
 end
 ```
 
-bin/pack/subpack/hello_world  ??  - why use folders (e.g. pack/subpack) in bin ??
+3) `bin/pack/subpack/hello_world`  ??  - why use folders (e.g. pack/subpack) in bin ??
 
 
 
