@@ -1,30 +1,30 @@
-= <%= project %>
+= $project$
 
-home  :: <%= XIF %> (url)
-code  :: <%= XIF %> (url)
-rdoc  :: <%= XIF %> (url)
-bugs  :: <%= XIF %> (url)
+home  :: FIX (url)
+code  :: FIX (url)
+rdoc  :: FIX (url)
+bugs  :: FIX (url)
 ... etc ...
 
 == DESCRIPTION:
 
-<%= XIF %> (describe your package)
+FIX (describe your package)
 
 == FEATURES/PROBLEMS:
 
-* <%= XIF %> (list of features or problems)
+* FIX (list of features or problems)
 
 == SYNOPSIS:
 
-  <%= XIF %> (code sample of usage)
+  FIX (code sample of usage)
 
 == REQUIREMENTS:
 
-* <%= XIF %> (list of requirements)
+* FIX (list of requirements)
 
 == INSTALL:
 
-* <%= XIF %> (sudo gem install, anything else)
+* FIX (sudo gem install, anything else)
 
 == DEVELOPERS:
 
@@ -39,7 +39,7 @@ and generate the RDoc.
 
 (The MIT License)
 
-Copyright (c) <%= Time.new.strftime("%Y") %> <%= XIF %>
+Copyright (c) $year$ FIX
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
