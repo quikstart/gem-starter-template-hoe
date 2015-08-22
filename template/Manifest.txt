@@ -3,6 +3,6 @@ History.txt
 Manifest.txt
 README.txt
 Rakefile
-bin/$file_name$
+bin/$bin_file_name$
 lib/$file_name$.rb
 test/$test_file_name$.rb
