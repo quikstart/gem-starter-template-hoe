@@ -1,21 +1,92 @@
-# gem starter template - classic hoe version
+# Gem Quick Starter Template - Hoe Classic Edition
 
-An alternative gem starter template - use the "classic" gem starter template from the hoe gem.
+An alternative gem quick starter template - uses the "classic" template from the hoe gem.
+Try:
+
+```
+$ quik new gem-hoe
+```
+
+This will download and run
+the [`gem-hoe.rb`](https://github.com/rubyref/scripts/blob/master/gem-hoe.rb)
+quik starter wizard script.
+Resulting in:
+
+```
+Hello from the gem quick starter wizard script (hoe classic edition)
+
+Q: Name of the gem? [hola]: hola
+
+Thanks! Ready-to-go. Stand back.
+
+  Downloading Gem Starter Template (Hoe Classic Edition)...
+  Setting up Gem Starter Template (Hoe Classic Edition)...
+  ...
+  Merging templates...
+    name:  "hola"
+    klass: "Hola"
+    test_klass: "TestHola"
+    ...
+Done.
+```
+
+Resulting in:
+
+```
+hola
+├── bin
+|   └── hola
+├── lib
+|   └── hola.rb
+├── test
+|   └── test_hola.rb
+├── History.txt
+├── Manifest.txt
+├── Rakefile
+└── README.txt
+```
 
 
-## Notes
+Note: The script also works with module names - use the "standard" gem naming patterns/convention
+e.g.  use `mundo-hola` for `Mundo::Hola` and so on. Resulting in:
 
-As input requires the gem name called project (in sow) and sow (auto-)derives all other names. Example:
+```
+hola
+├── bin
+|   └── mundo_hola
+├── lib
+|   └── mundo
+|       └── hola.rb
+├── test
+|   └── mundo
+|       └── test_hola.rb
+├── History.txt
+├── Manifest.txt
+├── Rakefile
+└── README.txt
+```
+
+That's it.
+
+
+
+## Hoe Notes
+
+The how (sow) tool requires the gem name called project as the (only) input
+and (auto-)derives all other names. Example:
 
 ### Example 1 - project: `hello`
 
-- klass       => `Hello`
-- test_klass  => `TestHello`
-- file_name   => `hello`
-- modules     =>
+- klass          => `Hello`
+- test_klass     => `TestHello`
+- file_name      => `hello`
+- ext_name       => `hello`
+- test_file_name => `test_hello`
+- bin_file_name  => `hello`
+- modules        =>
 
 
-1) `lib/hello.rb`: ??
+1) `lib/hello.rb`:
 
 ```ruby
 class Hello
@@ -23,7 +94,7 @@ class Hello
 end
 ```
 
-2) `test/test_hello.rb`: ??
+2) `test/test_hello.rb`:
 
 ```ruby
 class TestHello < Minitest::Test
@@ -31,17 +102,19 @@ class TestHello < Minitest::Test
 end
 ```
 
-3) `bin/hello`  ??
-
 
 ### Example 2 - project: `pack-hello`
 
-- klass      => `Pack::Hello`
-- test_klass => `TestPack::TestHello`
-- file_name  => `pack/hello`
-- modules    => `Pack`
+- klass          => `Pack::Hello`
+- test_klass     => `TestPack::TestHello`
+- file_name      => `pack/hello`
+- ext_name       => `hello`
+- test_file_name => `pack/test_hello`
+- bin_file_name  => `pack_hello`
+- modules        => `Pack`
 
-1) `lib/pack/hello.rb`: ??
+
+1) `lib/pack/hello.rb`:
 
 ```ruby
 module Pack ; end
@@ -51,7 +124,7 @@ class Pack::Hello
 end
 ```
 
-2) `test/testpack/test_hello.rb`: ??
+2) `test/pack/test_hello.rb`:
 
 ```ruby
 module TestPack ; end
@@ -61,15 +134,16 @@ class TestPack::TestHello < Minitest::Test
 end
 ```
 
-3) `bin/pack/hello`
-
 
 ### Example 3 - project: `pack-subpack-hello_world`
 
-- klass      => `Pack::Subpack::HelloWorld`
-- test_klass => `TestPack::TestSubpack::TestHelloWorld`
-- file_name  => `pack/subpack/hello_world`
-- modules    => `Pack`, `Subpack`
+- klass          => `Pack::Subpack::HelloWorld`
+- test_klass     => `TestPack::TestSubpack::TestHelloWorld`
+- file_name      => `pack/subpack/hello_world`
+- ext_name       => `hello`
+- test_file_name => `pack/subpack/test_hello_world`
+- bin_file_name  => `pack_subpack_hello_world`
+- modules        => `Pack`, `Subpack`
 
 1) `lib/pack/subpack/hello_world.rb`:
 
@@ -82,7 +156,7 @@ class Pack::Subpack::HelloWorld
 end
 ```
 
-2) `test/testpack/testsubpack/test_hello_world.rb`: ??
+2) `test/pack/subpack/test_hello_world.rb`:
 
 ```ruby
 module TestPack ; end
@@ -92,9 +166,6 @@ class Testpack::Testsubpack::TestHelloWorld < Minitest::Test
   ...
 end
 ```
-
-3) `bin/pack/subpack/hello_world`  ??  - why use folders (e.g. pack/subpack) in bin ??
-
 
 
 ## Sources
@@ -130,3 +201,8 @@ Comments from the source:
 >
 > Test klass names are same as Klass with Test prepended to each part.  
 
+
+## Questions? Comments?
+
+Send them along to the ruby-talk mailing list.
+Thanks!
