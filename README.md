@@ -8,8 +8,7 @@ $ quik new gem-hoe
 ```
 
 This will download and run
-the [`gem-hoe.rb`](https://github.com/rubyref/scripts/blob/master/gem-hoe.rb)
-quik starter wizard script.
+the quik starter wizard script ([`quik.rb`](quick.rb)).
 Resulting in:
 
 ```
@@ -71,7 +70,7 @@ That's it.
 
 ## More (Alternative) Quick Starter Templates / Scripts
 
-See the [Rubyref's Scripts](https://github.com/rubyref/scripts) library or try:
+See the [Quik Scripts](https://github.com/quik/scripts) catalog / directory or try:
 
 ```
 $ quik ls
