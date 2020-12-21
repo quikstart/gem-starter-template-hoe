@@ -8,7 +8,7 @@ $ quik new gem-hoe
 ```
 
 This will download and run
-the quik starter wizard script ([`quik.rb`](quick.rb)).
+the quik starter wizard script ([`quik.rb`](quik.rb)).
 Resulting in:
 
 ```
