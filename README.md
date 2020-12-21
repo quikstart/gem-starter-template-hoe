@@ -70,7 +70,7 @@ That's it.
 
 ## More (Alternative) Quick Starter Templates / Scripts
 
-See the [Quik Scripts](https://github.com/quik/scripts) catalog / directory or try:
+See the [Quik Scripts](https://github.com/quikstart/scripts) catalog / directory or try:
 
 ```
 $ quik ls
